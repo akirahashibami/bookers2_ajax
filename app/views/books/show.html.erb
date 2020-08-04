@@ -47,7 +47,9 @@
 			</table>
 
 			<!-- コメント一覧テンプレ化（サブミット含む） -->
+			<ol id="comment-<%= @book.id %>">
 			<%= render 'books/post_comments', book_comments: @book.book_comments, book: @book, book_comment: @book_comment %>
+			</ol>
 
 	</div>
 </div>
