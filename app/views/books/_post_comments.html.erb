@@ -1,0 +1,13 @@
+<ol>
+  <% book_comments.each do |book_comments| %>
+  <!-- コメントのテンプレ化 -->
+    <%= render 'books/comments', book_comment: book_comments %>
+  <% end %>
+</ol>
+<%= form_with model: [book,book_comment] do |f| %>
+    <div class="col-sm-2">
+      <%= f.text_area :comment, rows:'5', placeholder: "コメント..." %>
+      <%= f.submit "送信", class: "btn btn-md btn-success" %>
+    </div>
+
+<% end %>
